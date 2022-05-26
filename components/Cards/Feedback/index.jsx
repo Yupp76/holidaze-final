@@ -5,7 +5,7 @@ const { feedback } = styles;
 
 const FeedbackCard = ({ imgSrc, fullname, role, text }) => {
   return (
-    <div className={joinClassNames([feedback, "card card--bordered elevation-sm-1"])}>
+    <div className={joinClassNames([feedback, "card card--bordered elevation-sm-1 h-100 w-100"])}>
       <div className="align-center card__cover d-flex justify-center">
         <img src={imgSrc} alt={fullname} />
       </div>
