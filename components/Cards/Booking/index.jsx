@@ -28,7 +28,7 @@ const BookingCard = ({
       <div className={booking__amenities}>
         <Amenities {...amenities} />
       </div>
-      <div className="card__content">
+      <div className="card__content mt-auto">
         <h3 className="txt-h3 font-weight-normal font-comp color-darktxt-capitalize">
           {title}
         </h3>
