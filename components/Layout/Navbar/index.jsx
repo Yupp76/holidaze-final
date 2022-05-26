@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useWindowSize from "helpers/hooks/useWindowSize";
 import { joinClassNames } from "helpers/utils";
-import { useAuth } from "context/auth";
+import { useAuth } from "contexts/auth";
 import { SquareBTN } from "components/Button";
 
 import SearchBar from "../Search";
