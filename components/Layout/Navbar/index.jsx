@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import useWindowSize from "helpers/hooks/useWindowSize";
 import { joinClassNames } from "helpers/utils";
+import { useAuth } from "context/auth";
 import { SquareBTN } from "components/Button";
 
 import SearchBar from "../Search";
@@ -15,6 +16,7 @@ import { navigationList } from "../constants";
 const { navbar__wrapper, navbar__header, navbar__mobile } = styles;
 
 const Navbar = () => {
+  const { isAuthenticated } = useAuth();
   const router = useRouter();
   const size = useWindowSize();
   const [isActiveSearch, setIsActiveSearch] = useState(false);
@@ -87,7 +89,7 @@ const Navbar = () => {
               </ul>
               <ul className="nav__block">
                 <li className="mx-0-50">
-                  <SquareBTN href="/login">
+                  <SquareBTN href={isAuthenticated ? "/admin" : "/login"}>
                     <FontAwesomeIcon icon={["far", "user"]} size="xs" />
                   </SquareBTN>
                 </li>
