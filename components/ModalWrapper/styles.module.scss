@@ -35,7 +35,10 @@
     min-width: 450px;
     max-width: 500px;
     padding-top: 4rem;
-    transform: translateX(-50%);
+    transform: translateX(-50%);    
+    @include respond-to("x-small") {
+      min-width: 320px;
+    }
   }
 
   &__isOpen {
