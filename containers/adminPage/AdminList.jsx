@@ -25,7 +25,10 @@ const AdminList = ({ data }) => {
       if (response) {
         setNotification()
           .onSuccess("Succesfully deleted entry")
-          .onClose(() => router.reload());
+          .onClose(() => { 
+            setModelOpen(false);
+            router.reload();
+           });
       }
     } catch (err) {
       setNotification()
