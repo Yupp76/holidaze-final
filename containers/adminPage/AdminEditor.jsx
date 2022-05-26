@@ -33,7 +33,7 @@ const EditorForm = ({ data }) => {
           .onClose(() => {
             setSubmitting(false);
             resetForm();
-            router.reload();
+            router.push("/admin/list");
           });
       }
     } catch (error) {
