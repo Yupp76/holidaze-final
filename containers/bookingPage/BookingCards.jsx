@@ -7,7 +7,7 @@ const BookingCards = ({ data }) => {
     <ul className="row">
       {data.map((item) => {
         return (
-          <li key={uuidv4()} className="col-4">
+          <li key={uuidv4()} className="col-4 col-md-6 col-sm-12">
             <BookingCard
               id={item.id}
               amenities={transformAmenitiesData(amenitiesToArr(item.attributes.Amenities))}
