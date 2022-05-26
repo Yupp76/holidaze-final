@@ -39,7 +39,7 @@ const AdminList = ({ data }) => {
   return (
     <>
       <div className="row">
-        <div className="col-4">
+        <div className="col-4 col-md-6 col-sm-12">
           <AddHotelCard
             text={`Click to add a new listing`}
             onClick={handleOpen}
@@ -48,7 +48,7 @@ const AdminList = ({ data }) => {
         {data.map((item) => {
           const { attributes, id } = item;
           return (
-            <div className="col-4">
+            <div className="col-4 col-md-6 col-sm-12">
               <BookingCard
                 id={id}
                 title={attributes.Name}
